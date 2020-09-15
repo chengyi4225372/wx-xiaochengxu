@@ -88,11 +88,11 @@ App({
     //扶贫日记简介
     deeds_logdesc : Http + "api/Deeds/getLogContent" , //ok
     //扶贫日记详情
-    deeds_info : Http + "api/Deeds/deesLogInfo",
+    deeds_info : Http + "api/Deeds/deesLogInfo", //
     //扶贫报道新闻列表
     deeds_news_list : Http + "api/Deeds/getNewsList", //ok
     //扶贫报道新闻详情
-    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", 
+    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //
     //扶贫荣耀分类
     glory_cates :  Http + "api/Glory/getGloryCates", //ok
     //扶贫荣耀简介
@@ -102,10 +102,10 @@ App({
     //先进个人列表
     person_list  :  Http + "api/Glory/getGloryPersonList", //ok
     //先进个人详情
-    person_info  :  Http + "api/Glory/personInfo",
+    person_info  :  Http + "api/Glory/personInfo", //
     //留言结语
     message_desc  : Http + "api/Message/getMessageContentApi", //ok
-    //提交留言 todo
+    //提交留言 todo 
 
     //留言点赞 todo 
    
