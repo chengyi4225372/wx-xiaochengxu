@@ -18,33 +18,40 @@
           </view>
 
           <view class="report_swiper">
-            <view class="swiper-prev swiper-button {{current == 0 ? 'disable':''}}" bindtap="{{current > 0 ? 'prev':''}}">
-              <image src="../../images/prev.png"></image>
-            </view>
-            <view class="swiper-next swiper-button {{current == reportList.length - 1 ? 'disable':''}}" bindtap="{{current < reportList.length - 1 ? 'next':''}}">
-              <image src="../../images/next.png"></image>
-            </view>
-            <swiper indicator-dots="true" indicator-active-color="#e05617" autoplay="{{autoplay}}" current="{{current}}" bindchange="currentChange">
+            <swiper indicator-dots="true" indicator-active-color="#e05617" autoplay="{{autoplay}}">
               <block wx:for="{{reportList}}" wx:key="*this">
                 <swiper-item>
                   <view class="report_slide">
-                    <navigator url="/pages/deed_reportinfo/reportinfo?id={{item.id}}" hover-class="none">
-                      <view class="brief_txt1">
-                        <view class="mark">
-                          <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
-                        </view>
-                        <view class="p">{{report.content}}</view>
-                        <view class="mark2">
-                          <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
-                        </view>
+                    <view class="brief_txt1">
+                      <view class="mark">
+                        <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
                       </view>
-                      <view class="report_img">
+                      <view class="p">{{report.content}}</view>
+                      <view class="mark2">
+                        <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
+                      </view>
+                    </view>
+                    <view class="imgSwiper">
+                      <view class="swiper-prev swiper-button {{item.current == 0 ? 'disable':''}}" data-index="{{index}}" bindtap="{{item.current > 0 ? 'prev':''}}">
+                        <image src="../../images/prev.png"></image>
+                      </view>
+                      <view class="swiper-next swiper-button {{item.current == reportList[index].imgList.length - 1 ? 'disable':''}}" data-index="{{index}}" bindtap="{{item.current < reportList[index].imgList.length - 1 ? 'next':''}}">
+                        <image src="../../images/next.png"></image>
+                      </view>
+                      <swiper current="{{item.current}}" bindchange="currentChange" data-index="{{index}}">
+                        <block wx:for="{{item.imgList}}" wx:key="*this">
+                          <swiper-item>
+                            <image src="{{item}}"></image>
+                          </swiper-item>
+                        </block>
+                      </swiper>
+                    </view>
+                    <!-- <view class="report_img">
                         <image src="{{item.path}}"></image>
-                      </view>
-                      <view class="report_info">
-                        {{item.introduce}}
-                      </view>
-                    </navigator>
+                      </view> -->
+                    <view class="report_info">
+                      {{item.introduce}}
+                    </view>
                   </view>
                 </swiper-item>
               </block>
