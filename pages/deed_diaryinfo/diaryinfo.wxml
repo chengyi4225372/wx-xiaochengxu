@@ -12,7 +12,7 @@
             <view class="icon">
               <image src="../../images/left.png"></image>
             </view>
-            <view class="h1">民生帮扶</view>
+            <view class="h1">{{data.title}}</view>
             <view class="icon">
               <image src="../../images/right.png"></image>
             </view>
@@ -20,7 +20,7 @@
           <view class="history_con">
             <image src="../../images/img4.jpg" mode="widthFix"></image>
             <view class="audio_box">
-              <view class="audio_h1">{{audioTitle}}</view>
+              <view class="audio_h1">{{data.music_title}}</view>
               <view class="play-bar">
                 <view class="audio-slide flex-between">
                   <slider value="{{changeSlideNum}}" left-icon="cancel" right-icon="success_no_circle" backgroundColor="#d7d7d7" activeColor="#16b752" block-size="5" />

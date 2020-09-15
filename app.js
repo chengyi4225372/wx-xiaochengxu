@@ -1,9 +1,9 @@
 //app.js
 
-//var Http = "http://local.onebase.com/"; //测试接口
+var Http = "http://local.onebase.com/"; //测试接口
 
 //正式接口
-var Http = 'https://v1141.longcai027.cn/';
+//var Http = 'https://v1141.longcai027.cn/';
 
 
 App({
@@ -85,13 +85,13 @@ App({
     deeds_video: Http +"api/Deeds/getWorksVideoList",//ok
     //扶贫日记列表
     deeds_log  : Http + "api/Deeds/getDeedsLog",//ok
-    //扶贫日记简介
+    //扶贫报道简介
     deeds_logdesc : Http + "api/Deeds/getLogContent" , //ok
-    //扶贫日记详情
+    //扶贫报道详情
     deeds_info : Http + "api/Deeds/deesLogInfo", //
-    //扶贫报道新闻列表
+    //扶贫日志新闻列表
     deeds_news_list : Http + "api/Deeds/getNewsList", //ok
-    //扶贫报道新闻详情
+    //扶贫日志新闻详情
     deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //
     //扶贫荣耀分类
     glory_cates :  Http + "api/Glory/getGloryCates", //ok

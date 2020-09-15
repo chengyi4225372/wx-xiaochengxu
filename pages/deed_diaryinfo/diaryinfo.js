@@ -147,7 +147,7 @@ Page({
   onLoad: function(options) {
     var that = this;     
     wx.request({
-      url: getApp().globalData.deeds_info,
+      url: getApp().globalData.deeds_newsinfo,
       data: {'id':options.id},
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       success: function(res){
