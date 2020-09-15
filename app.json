@@ -31,7 +31,8 @@
     "pages/deed_diaryinfo/diaryinfo",
     "pages/honor_unit/unit",
     "pages/honor_individual/individual",
-    "pages/liuyan/liuyan"
+    "pages/liuyan/liuyan",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",

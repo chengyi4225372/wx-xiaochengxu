@@ -15,6 +15,28 @@ Page({
   onLoad: function (options) {
     var that = this;
     console.log(options.id);  
+
+    wx.request({
+      url: getApp().globalData.explore_content,
+      data: {'cate_id':options.id},
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      success: function(res){
+        // success
+        console.log(res.data.data);
+         
+        that.setData({
+          content:res.data.data,
+        })
+
+        wx.setStorageSync('content', res.data.data)
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
     
     wx.request({
      url:getApp().globalData.explore_list,

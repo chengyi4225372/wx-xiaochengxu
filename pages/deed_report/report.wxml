@@ -26,7 +26,7 @@
                       <view class="mark">
                         <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
                       </view>
-                      <view class="p">{{report.content}}</view>
+                      <view class="p">{{report.introduce}}</view>
                       <view class="mark2">
                         <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
                       </view>
@@ -39,7 +39,7 @@
                         <image src="../../images/next.png"></image>
                       </view>
                       <swiper current="{{item.current}}" bindchange="currentChange" data-index="{{index}}">
-                        <block wx:for="{{item.imgList}}" wx:key="*this">
+                        <block wx:for="{{item.imgs_ids}}" wx:key="*this">
                           <swiper-item>
                             <image src="{{item}}"></image>
                           </swiper-item>
@@ -49,9 +49,7 @@
                     <!-- <view class="report_img">
                         <image src="{{item.path}}"></image>
                       </view> -->
-                    <view class="report_info">
-                      {{item.introduce}}
-                    </view>
+                      <rich-text class="" nodes="{{item.introduce}}"></rich-text>
                   </view>
                 </swiper-item>
               </block>

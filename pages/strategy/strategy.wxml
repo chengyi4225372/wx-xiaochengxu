@@ -26,7 +26,7 @@
                   <image src="../../images/xingzhuang.png"></image>
                 </view>
                 <view class="num">
-                  <image src="../../images/num.png"></image>
+                  <image src="../../images/num{{item.num}}.png"></image>
                 </view>
                 <view class="p">{{item.title}}</view>
               </navigator>

@@ -1,9 +1,9 @@
 //app.js
 
-//var Http = "http://local.onebase.com/"; //测试接口
+var Http = "http://local.onebase.com/"; //测试接口
 
 //正式接口
-var Http = 'https://v1141.longcai027.cn/';
+//var Http = 'https://v1141.longcai027.cn/';
 
 
 App({
@@ -67,6 +67,8 @@ App({
     histort_news :  Http +"api/Explore/getHistoryNews", //ok
     //探索管理新闻列表
     explore_list: Http +"api/Explore/HistoryNews",//ok
+    //探索管理简介
+    explore_content : Http +"api/Explore/newsInfo",//ok
     //探索管理新闻详情
     explore_info: Http +"api/Explore/ExploreNewsInfo",//ok 
     //项目精选列表
@@ -83,16 +85,16 @@ App({
     deeds_music: Http +"api/Deeds/getWorksMusicList", //ok
     //扶贫作品 视频
     deeds_video: Http +"api/Deeds/getWorksVideoList",//ok
-    //扶贫日记列表
-    deeds_log  : Http + "api/Deeds/getDeedsLog",//ok
+    //扶贫报道列表
+    deeds_log  : Http + "api/Deeds/getDeedsLog",//有问题
     //扶贫报道简介
-    deeds_logdesc : Http + "api/Deeds/getLogContent" , //ok
+    deeds_logdesc : Http + "api/Deeds/deesLogInfo" , //无用
     //扶贫报道详情
-    deeds_info : Http + "api/Deeds/deesLogInfo", //
+    deeds_info : Http + "api/Deeds/deesLogInfo", //删除 没有详情
     //扶贫日志新闻列表
     deeds_news_list : Http + "api/Deeds/getNewsList", //ok
     //扶贫日志新闻详情
-    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //
+    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //ok
     //扶贫荣耀分类
     glory_cates :  Http + "api/Glory/getGloryCates", //ok
     //扶贫荣耀简介
@@ -106,7 +108,7 @@ App({
     //留言结语
     message_desc  : Http + "api/Message/getMessageContentApi", //ok
     //提交留言
-    
+    message_action : Http +"",
     //留言点赞
    
 

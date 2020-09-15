@@ -19,6 +19,13 @@ Page({
    */
   onLoad: function (options) { 
      var wdata = this;
+    
+    //未测试 
+    if(app.globalData.openid){
+
+    }else{
+
+    }
 
       //前言图片接口
       wx.request({

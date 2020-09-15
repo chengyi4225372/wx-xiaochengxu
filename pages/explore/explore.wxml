@@ -11,25 +11,25 @@
             <view class="mark">
               <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
             </view>
-            <view class="p">{{data.content}}</view>
+            <view class="p">{{content}}</view>
             <view class="mark2">
               <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
             </view>
           </view>
           <view class="strategy_list">
-            <view class="strategy_li red_bg">
-              <block wx:for="{{data}}" wx:key="{{index}}">
+            <block wx:for="{{data}}" wx:key="{{index}}">
+            <view class="strategy_li">
               <navigator url="/pages/strategy_one/one?id={{item.id}}" hover-class="none" class="flex align-center">
                 <view class="strategy_bg">
                   <image src="../../images/xingzhuang.png"></image>
                 </view>
                 <view class="num">
-                  <image src="../../images/num{{index +1 | number}}.png"></image>
+                  <image src="../../images/num{{item.num}}.png"></image>
                 </view>
                 <view class="p">{{item.title}}</view>
               </navigator>
-            </block>
           </view>
+        </block>
             <!-- <view class="strategy_li yellow_bg">
               <navigator url="/pages/explore_two/two" hover-class="none" class="flex align-center">
                 <view class="strategy_bg">
