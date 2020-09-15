@@ -17,6 +17,7 @@
             </view>
           </view>
           <view class="strategy_list">
+           
             <block wx:for="{{data}}" wx:key="{{index}}">
 
             <view class="strategy_li">
@@ -25,12 +26,12 @@
                   <image src="../../images/xingzhuang.png"></image>
                 </view>
                 <view class="num">
-                  <image src="../../images/num{{index +1 |number}}.png"></image>
+                  <image src="../../images/num.png"></image>
                 </view>
                 <view class="p">{{item.title}}</view>
               </navigator>
             </view>
-            
+
           </block>
           
              <!-- <view class="strategy_li"> 
