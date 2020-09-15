@@ -96,7 +96,7 @@ Page({
         array[i]._play = false
       }
     }
-    innerAudioContext.src = array[index].musicSrc;
+    innerAudioContext.src = array[index].path;
     innerAudioContext.title = array[index].title;
     innerAudioContext.play();
     //监听播放
@@ -231,6 +231,7 @@ Page({
            works.setData({
             audioList:res.data.data,
            })
+           console.log(res.data.data)
             wx.setStorageSync('audioList', res.data.data) 
          },
          fail: function() {

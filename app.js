@@ -102,7 +102,7 @@ App({
     //先进个人列表
     person_list  :  Http + "api/Glory/getGloryPersonList", //ok
     //先进个人详情
-    person_info  :  Http + "api/Glory/personInfo", //
+    person_info  :  Http + "api/Glory/personInfo", //删除无用接口
     //留言结语
     message_desc  : Http + "api/Message/getMessageContentApi", //ok
     //提交留言
