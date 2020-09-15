@@ -18,7 +18,7 @@
             <p style="text-indent:2em;">{{result.content}}</p>
           </view>
           <view class="preface_video">
-            <video id="myvideo" bindtimeupdate="timeupdate" src="{{result.path}}" poster="{{result.path}}" title="{{result.title}}" objectFit="cover" show-center-play-btn="{{false}}" controls="{{!videoPlay}}">
+            <video id="myvideo" bindtimeupdate="timeupdate" src="{{result.path}}" poster="{{result.path}}" title="{{result.title}}" objectFit="cover" controls="{{true}}">
               <view class="video-play flex-center" bindtap="videoPlay" data-id="myvideo" wx:if="{{videoPlay}}">
                 <image class='video-btn' src='../../images/player.png' />
                 <text>{{result.title}}</text>
