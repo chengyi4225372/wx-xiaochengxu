@@ -105,9 +105,9 @@ App({
     person_info  :  Http + "api/Glory/personInfo", //
     //留言结语
     message_desc  : Http + "api/Message/getMessageContentApi", //ok
-    //提交留言 todo 
-
-    //留言点赞 todo 
+    //提交留言
+    
+    //留言点赞
    
 
   }
