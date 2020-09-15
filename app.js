@@ -108,7 +108,9 @@ App({
     //留言结语
     message_desc  : Http + "api/Message/getMessageContentApi", //ok
     //提交留言
-    message_action : Http +"",
+    message_action : Http +"api/Message/setMessageAPi",
+    //最新留言 热门留言
+    message_news  : Http +"api/Message/getMessageList",
     //留言点赞
    
 
