@@ -16,25 +16,31 @@
               <image src="../../images/right.png"></image>
             </view>
           </view>
-            
+
           <view class="report_swiper">
-              <view class="swiper-prev swiper-button {{current == 0 ? 'disable':''}}" bindtap="{{current > 0 ? 'prev':''}}"><image src="../../images/prev.png"></image></view>
-              <view class="swiper-next swiper-button {{current == reportList.length - 1 ? 'disable':''}}" bindtap="{{current < reportList.length - 1 ? 'next':''}}"><image src="../../images/next.png"></image></view>
-            <swiper indicator-dots="true" indicator-active-color="#e05617" autoplay="{{autoplay}}"  current="{{current}}" bindchange="currentChange">
+            <view class="swiper-prev swiper-button {{current == 0 ? 'disable':''}}" bindtap="{{current > 0 ? 'prev':''}}">
+              <image src="../../images/prev.png"></image>
+            </view>
+            <view class="swiper-next swiper-button {{current == reportList.length - 1 ? 'disable':''}}" bindtap="{{current < reportList.length - 1 ? 'next':''}}">
+              <image src="../../images/next.png"></image>
+            </view>
+            <swiper indicator-dots="true" indicator-active-color="#e05617" autoplay="{{autoplay}}" current="{{current}}" bindchange="currentChange">
               <block wx:for="{{reportList}}" wx:key="*this">
                 <swiper-item>
                   <view class="report_slide">
                     <navigator url="/pages/deed_reportinfo/reportinfo?id={{item.id}}" hover-class="none">
-                    <view class="brief_txt1">
-              <view class="mark">
-                <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
-              </view>
-              <view class="p">{{report.content}}</view>
-              <view class="mark2">
-                <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
-              </view>
-            </view>
-                      <view class="report_img"><image src="{{item.path}}"></image></view>
+                      <view class="brief_txt1">
+                        <view class="mark">
+                          <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
+                        </view>
+                        <view class="p">{{report.content}}</view>
+                        <view class="mark2">
+                          <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
+                        </view>
+                      </view>
+                      <view class="report_img">
+                        <image src="{{item.path}}"></image>
+                      </view>
                       <view class="report_info">
                         {{item.introduce}}
                       </view>

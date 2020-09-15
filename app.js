@@ -1,9 +1,9 @@
 //app.js
 
-var Http = "http://local.onebase.com/"; //测试接口
+// var Http = "http://local.onebase.com/"; //测试接口
 
 //正式接口
-//var Http = 'https://v1141.longcai027.cn/';
+var Http = 'https://v1141.longcai027.cn/';
 
 
 App({
