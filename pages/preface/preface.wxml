@@ -1,0 +1,33 @@
+<!--pages/preface/preface.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="title">
+      <view class="h1 flex-center">
+        <image src="../../images/xuyan.png"></image>
+      </view>
+    </view>
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="preface_info">
+          <view class='wxParse'>
+
+            <p style="text-indent:2em;">{{result.content}}</p>
+          </view>
+          <view class="preface_video">
+            <video id="myvideo" bindtimeupdate="timeupdate" src="{{result.path}}" poster="{{result.path}}" title="{{result.title}}" objectFit="cover" show-center-play-btn="{{false}}" controls="{{!videoPlay}}">
+              <view class="video-play flex-center" bindtap="videoPlay" data-id="myvideo" wx:if="{{videoPlay}}">
+                <image class='video-btn' src='../../images/player.png' />
+                <text>{{result.title}}</text>
+              </view>
+            </video>
+            <view class="video_title">{{result.title}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

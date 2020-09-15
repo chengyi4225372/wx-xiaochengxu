@@ -1,0 +1,84 @@
+/* pages/preface/preface.wxss */
+.preface_box{
+  padding: 100rpx 35rpx;
+}
+.title{
+  text-align: center;
+}
+.title .h1{
+  vertical-align: middle;
+  font-size: 0;
+}
+.title .h1 image{
+  width: 228rpx;
+  height: 96rpx;
+}
+.title .h1::before,
+.title .h1::after{
+  display: inline-block;
+  content: '';
+  width: 110rpx;
+  height: 3px;
+  margin: 0 50rpx;
+  font-size: 0;
+}
+.title .h1::before{
+  background-image: linear-gradient(90deg,rgb(255,208,167),rgb(234,87,44));
+}
+.title .h1::after{
+  background-image: linear-gradient(270deg,rgb(255,208,167),rgb(234,87,44));
+}
+.preface_con{
+  width: 100%;
+  height: calc(100% - 150rpx);
+  padding: 40rpx 25rpx;
+  border-radius: 22rpx;
+  background-image: linear-gradient(rgb(255,83,55),rgb(255,140,56),rgb(255,196,56));
+  margin-top: 50rpx;
+}
+.preface_con_box{
+  height: 100%;
+  background-image: linear-gradient(rgb(255,247,235),rgb(255,255,255));
+  border-radius: 22rpx;
+  overflow-y: scroll;
+  padding: 50rpx 40rpx;
+}
+.preface_info{
+  font-size: 26rpx;
+  color: #222;
+  line-height: 48rpx;
+}
+.preface_video{
+  margin: 40rpx 0;
+}
+.preface_video video{
+  width: 100%;
+  height: 341rpx;
+  border-radius: 22rpx;
+}
+.preface_video .video_title{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #222;
+  padding: 0 20rpx;
+}
+.video-play{
+  width: 140rpx;
+  height: 46rpx;
+  border-radius: 23rpx;
+  background-color: rgba(255,255,255,.2);
+  margin-left: auto;
+  margin-top: 24rpx;
+  margin-right: 24rpx;
+}
+.video-play image{
+  width: 14rpx;
+  height: 18rpx;
+}
+.video-play text{
+  display: block;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10rpx;
+}

@@ -1,0 +1,34 @@
+<!--pages/honor_individual/individual.wxml-->
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="report_box">
+          <view class="report_swiper">
+              <view class="swiper-prev swiper-button {{current == 0 ? 'disable':''}}" bindtap="{{current > 0 ? 'prev':''}}"><image src="../../images/prev.png"></image></view>
+              <view class="swiper-next swiper-button {{current == reportList.length - 1 ? 'disable':''}}" bindtap="{{current < reportList.length - 1 ? 'next':''}}"><image src="../../images/next.png"></image></view>
+            <swiper indicator-dots="true" indicator-active-color="#e05617" autoplay="{{autoplay}}"  current="{{current}}" bindchange="currentChange">
+              <block wx:for="{{reportList}}" wx:key="*this">
+                <swiper-item>
+                  <view class="report_slide">
+                    <navigator url="/pages/deed_reportinfo/reportinfo" hover-class="none">
+                      <view class="report_img"><image src="{{item.path}}"></image></view>
+                      <view class="report_info">
+                        <view class="report_info_h2">{{item.users}}</view>
+                        <view class="h3">{{item.address}}</view>
+                        <view class="txt">{{item.desc}}</view>
+                      </view>
+                    </navigator>
+                  </view>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

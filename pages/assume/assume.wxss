@@ -1,0 +1,55 @@
+/* pages/assume/assume.wxss */
+.preface_info{
+  font-size: 26rpx;
+  color: #222;
+  line-height: 48rpx;
+}
+.assume_box1{
+  margin-bottom: 12rpx;
+}
+.assume_list{
+  margin-top: 50rpx;
+}
+.assume_li{
+  margin-bottom: 45rpx;
+}
+.assume_li:last-child{
+  margin-bottom: 0;
+}
+.assume_li .h1{
+  font-size: 26rpx;
+  line-height: 42rpx;
+  font-weight: bold;
+  color: #de2810;
+  padding-left: 50rpx;
+  position: relative;
+}
+.assume_li .h1::before{
+  display: block;
+  content: '';
+  width: 25rpx;
+  height: 25rpx;
+  background-color: #de2810;
+  margin-right: 20rpx;
+  position: absolute;
+  top: 10rpx;
+  left: 0;
+}
+.assume_li_con{
+  margin-top: 30rpx;
+  background-color: #fff;
+  border-radius: 22rpx;
+  padding: 30rpx;
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #222;
+}
+.assume_con2{
+  margin-top: 50rpx;
+}
+.assume_con2 .wxParse{
+  font-size: 26rpx;
+  line-height: 48rpx;
+  color: #222;
+  margin-top: 45rpx;
+}

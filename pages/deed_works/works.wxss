@@ -1,0 +1,119 @@
+/* pages/deed_works/works.wxss */
+.works_con{
+  margin-top: 50rpx;
+  height: calc(100% - 100rpx);
+}
+.works_tabLi{
+  width: 47%;
+  height: 78rpx;
+  background-color: rgba(255,70,31,.1);
+  border-radius: 39rpx;
+  font-size: 28rpx;
+  color: #ff461f;
+}
+.works_tabLi.active{
+  background-color: #ff461f;
+  color: #fff;
+}
+.preface_con_box{
+  overflow: hidden;
+}
+.works_box{
+  height: 100%;
+}
+.works_info{
+  height: calc(100% - 98rpx);
+  overflow-y: scroll;
+  margin-top: 20rpx;
+}
+.audio_li{
+  padding: 15rpx 0;
+}
+.audio_li .num{
+  flex-shrink: 0;
+  width: 55rpx;
+  height: 45rpx;
+  font-size: 28rpx;
+  color: #a5adb5;
+  line-height: 55rpx;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.audio_li .num .num_bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  z-index: -1;
+}
+.audio_li .num .num_bg image{
+  width: 100%;
+  height: 100%;
+}
+.audio_li .h1{
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+  color: #44484c;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+.audio_li .player{
+  flex-shrink: 0;
+  width: 33rpx;
+  height: 33rpx;
+  font-size: 0
+}
+.audio_li .player image{
+  width: 33rpx;
+  height: 33rpx;
+}
+.more{
+  width: 100%;
+  height: 90rpx;
+  border-radius: 16rpx;
+  background-color: #fff6f3;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #ef4a1a;
+  margin-top: 40rpx;
+}
+.video_li{
+  margin: 40rpx 0;
+}
+.video_li video{
+  width: 100%;
+  height: 341rpx;
+  border-radius: 22rpx;
+}
+.video_li .video_title{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #222;
+  padding: 30rpx 20rpx;
+}
+.video-play{
+  width: 140rpx;
+  height: 46rpx;
+  border-radius: 23rpx;
+  background-color: rgba(255,255,255,.2);
+  margin-left: auto;
+  margin-top: 24rpx;
+  margin-right: 24rpx;
+}
+.video-play image{
+  width: 14rpx;
+  height: 18rpx;
+}
+.video-play text{
+  display: block;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10rpx;
+}

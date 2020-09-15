@@ -1,0 +1,42 @@
+<!--pages/product/product.wxml-->
+<import src="../../components/navBar/navBar.wxml" />
+<import src="../../components/navBar/navBar.wxss" />
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="product_list">
+          <view class="product_ul flex-between flex-wrap">
+            <block wx:for="{{data}}" wx:key>
+              <view class="product_li" data-index="{{index}}" bindtap="radioChooise">
+                <image src="{{item.path}}"></image>
+                <view class="radio" wx:if="{{radioIndex == index}}">
+                  <image src="../../images/radio.png"></image>
+                </view>
+              </view>
+            </block>
+          </view>
+          <view class="join_btn red_btn red_bg" bindtap="joinTap">进入</view>
+        </view>
+        <view class="brief_box">
+          <view class="brief_txt1">
+            <view class="mark">
+              <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
+            </view>
+            <view class="p">{{con.content}}</view>
+            <view class="mark2">
+              <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <tabbar active="{{3}}"></tabbar> -->
+<view class='footer' style="{{model.phone == 'iPhone X' ? 'height:130rpx;':''}}">
+  <template is="tabBar" data="{{tabBar:bindData.tabBar,diy_color:'#f12928',model:model}}" />
+</view>

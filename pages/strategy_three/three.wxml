@@ -1,0 +1,61 @@
+<!--pages/strategy_three/three.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="history_box">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">就业扶贫</view>
+            <view class="icon">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="history_con">
+            <view class='wxParse'>
+              <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+            </view>
+          </view>
+        </view>
+        <view class="history_box">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">产业扶贫</view>
+            <view class="icon">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="history_con">
+            <view class='wxParse'>
+              <template is="wxParse" data="{{wxParseData:content2.nodes}}" />
+            </view>
+          </view>
+        </view>
+        <view class="history_box">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">旅游扶贫</view>
+            <view class="icon">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="history_con">
+            <view class='wxParse'>
+              <template is="wxParse" data="{{wxParseData:content3.nodes}}" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

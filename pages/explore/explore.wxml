@@ -1,0 +1,82 @@
+<!--pages/explore/explore.wxml-->
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="brief_box">
+          <view class="brief_txt1">
+            <view class="mark">
+              <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
+            </view>
+            <view class="p">{{data.content}}</view>
+            <view class="mark2">
+              <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
+            </view>
+          </view>
+          <view class="strategy_list">
+            <view class="strategy_li red_bg">
+              <block wx:for="{{data}}" wx:key="{{index}}">
+              <navigator url="/pages/strategy_one/one?id={{item.id}}" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num{{index +1 | number}}.png"></image>
+                </view>
+                <view class="p">{{item.title}}</view>
+              </navigator>
+            </block>
+          </view>
+            <!-- <view class="strategy_li yellow_bg">
+              <navigator url="/pages/explore_two/two" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num2.png"></image>
+                </view>
+                <view class="p">突出市场对接，实行强链补链</view>
+              </navigator>
+            </view>
+            <view class="strategy_li violet_bg">
+              <navigator url="/pages/explore_three/three" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num3.png"></image>
+                </view>
+                <view class="p">突出智志双扶，增强发展技能</view>
+              </navigator>
+            </view>
+            <view class="strategy_li green_bg">
+              <navigator url="/pages/explore_four/four" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num4.png"></image>
+                </view>
+                <view class="p">突出平台帮扶，凝聚社会力量</view>
+              </navigator>
+            </view>
+            <view class="strategy_li blue_bg">
+              <navigator url="/pages/explore_five/five" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num5.png"></image>
+                </view>
+                <view class="p">突出党建引领，探索基层治理</view>
+              </navigator>
+            </view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

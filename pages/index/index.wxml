@@ -1,0 +1,13 @@
+<!--pages/index/index.wxml-->
+<!-- <wxs module="util" src="../../utils/util.wxs" /> -->
+<import src="../../components/navBar/navBar.wxml" />
+<import src="../../components/navBar/navBar.wxss" />
+<view class="container" bindtap="joinTap">
+  <view class="bg"><image src="{{prefaceImg}}"></image></view>
+  <view class="join_btn red_btn flex-center" bindtap="joinTap">点击屏幕进入</view> 
+</view> 
+<!-- <tabbar active="{{0}}"></tabbar> -->
+
+<view class='footer' style="{{model.phone == 'iPhone X' ? 'height:130rpx;':''}}">
+  <template is="tabBar" data="{{tabBar:bindData.tabBar,diy_color:'#f12928',model:model}}" />
+</view>

@@ -1,0 +1,54 @@
+<!--pages/assume/assume.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box assume_con">
+        <view class="assume_box1">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">殷殷嘱托</view>
+            <view class="icon">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="assume_list">
+            <view  wx:for="{{result}}" wx:key="index">
+            
+            <view class="assume_li">
+              <view class="h1">{{item.title}}</view>
+              <view class="assume_li_con">
+                <view class="txt">{{item.content}}</view>
+              </view>
+            </view>
+
+          </view>
+
+          </view>
+        </view>
+        <view class="assume_box2">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">领导关怀</view>
+            <view class="icon">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="assume_con2">
+            <!-- <image src="../../images/img2.jpg" mode="widthFix"></image> -->
+            <view class='wxParse'>
+              <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

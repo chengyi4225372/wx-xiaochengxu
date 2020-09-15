@@ -1,0 +1,52 @@
+/* pages/deed_diaryinfo/diaryinfo.wxss */
+.preface_info{
+  font-size: 26rpx;
+  color: #222;
+  line-height: 48rpx;
+}
+.history_con{
+  margin-top: 50rpx;
+}
+.wxParse{
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #222;
+}
+.history_box{
+  margin-bottom: 80rpx;
+}
+.history_box:last-child{
+  margin-bottom: 0;
+}
+.audio_box{
+  background-color: #ffeed4;
+  border-radius: 16rpx;
+  padding: 40rpx 28rpx;
+  margin: 13rpx 0 50rpx;
+}
+.play-bar .time{
+  font-size: 22rpx;
+  color: #222;
+}
+.play-bar .audio-slide{
+  flex: 1;
+}
+.audio-slide slider{
+  flex: 1;
+}
+.player{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+  font-size: 0;
+}
+.player image{
+  width: 46rpx;
+  height: 46rpx;
+}
+.audio_h1{
+  font-size: 26rpx;
+  line-height: 42rpx;
+  font-weight: bold;
+  color: #222;
+}

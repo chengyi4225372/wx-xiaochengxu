@@ -1,0 +1,18 @@
+/* pages/strategy_two/two.wxss */
+.preface_info{
+  font-size: 26rpx;
+  color: #222;
+  line-height: 48rpx;
+}
+.wxParse{
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #222;
+  margin-top: 50rpx;
+}
+.history_box{
+  margin-bottom: 80rpx;
+}
+.history_box:last-child{
+  margin-bottom: 0;
+}

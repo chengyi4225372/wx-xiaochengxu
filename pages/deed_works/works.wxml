@@ -1,0 +1,76 @@
+<!--pages/deed_works/works.wxml-->
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="works_box">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">扶贫作品</view>
+            <view class="icon" bindtap="nextPlay">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="works_con">
+            <view class="works_tab flex-between">
+              <view class="works_tabLi flex-center {{worksIndex == 0 ? 'active':''}}" data-index="0" bindtap="worksTab">播放歌曲</view>
+              <view class="works_tabLi flex-center {{worksIndex == 1 ? 'active':''}}" data-index="1" bindtap="worksTab">视频展示</view>
+            </view>
+            <view class="works_info" id="main">
+              <!-- 歌曲 -->
+              <block wx:if="{{worksIndex == 0}}">
+                <view class="audio_list" id="list">
+                  <view class="audio_ul">
+                    <block wx:for="{{audioList}}" wx:key>
+                      <view class="audio_li flex-between" data-index="{{index}}" bindtap="musicePlay">
+                        <view class="num" style="{{index < 3 ? 'color:#fff':''}}">
+                          <block wx:if="{{index < 9}}">0</block>{{index+1}}
+                          <block wx:if="{{index < 3}}">
+                            <view class="num_bg">
+                              <image src="../../images/first.png" wx:if="{{index == 0}}"></image>
+                              <image src="../../images/two.png" wx:if="{{index == 1}}"></image>
+                              <image src="../../images/three.png" wx:if="{{index == 2}}"></image>
+                            </view>
+                          </block>
+                        </view>
+                        <view class="h1">{{item.title}}</view>
+                        <view class="player">
+                          <image src="{{item._play ? '../../images/stop.png':'../../images/player2.png'}}"></image>
+                        </view>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="more flex-center" bindtap="musicMore">显示更多歌曲</view>
+                </view>
+              </block>
+              <!-- 视频 -->
+              <block wx:if="{{worksIndex == 1}}">
+                <view class="video_list">
+                  <view class="video_ul">
+                  <block wx:for="{{videoList}}" wx:key>
+                    <view class="video_li">
+                      <video id="video{{index}}" bindtimeupdate="timeupdate" src="{{item.path}}" poster="{{item.poster}}" title="{{item.title}}" objectFit="cover" show-center-play-btn="{{false}}" controls="{{item.play}}" bindplay="pause" bindpause="pause" bindended="videoend">
+                        <view class="video-play flex-center" bindtap="videoPlay" data-index="{{index}}" wx:if="{{!item.play}}">
+                          <image class='video-btn' src='../../images/player.png' />
+                          <text>{{item.duration}}</text>
+                        </view>
+                      </video>
+                      <view class="video_title">{{item.title}}</view>
+                    </view>
+                    </block>
+                  </view>
+                  <view class="more flex-center" bindtap="videoMore">显示更多视频</view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

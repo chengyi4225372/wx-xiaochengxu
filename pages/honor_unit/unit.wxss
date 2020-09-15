@@ -1,0 +1,23 @@
+/* pages/honor_unit/unit.wxss */
+.preface_info{
+  font-size: 26rpx;
+  color: #222;
+  line-height: 48rpx;
+}
+.history_con{
+  margin-top: 50rpx;
+}
+.wxParse{
+  font-size: 24rpx;
+  line-height: 42rpx;
+  color: #222;
+}
+.history_box{
+  margin-bottom: 80rpx;
+}
+.history_box:last-child{
+  margin-bottom: 0;
+}
+.title2 .h1{
+  font-size: 32rpx;
+}

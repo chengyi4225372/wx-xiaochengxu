@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/preface/preface",
+    "pages/overview/overview",
+    "pages/practice/practice",
+    "pages/product/product",
+    "pages/deed/deed",
+    "pages/epilogue/epilogue",
+    "pages/assume/assume",
+    "pages/brief/brief",
+    "pages/history/history",
+    "pages/strategy/strategy",
+    "pages/explore/explore",
+    "pages/accountability/accountability",
+    "pages/accountability_info/info",
+    "pages/strategy_one/one",
+    "pages/strategy_two/two",
+    "pages/strategy_three/three",
+    "pages/explore_one/one",
+    "pages/explore_two/two",
+    "pages/explore_three/three",
+    "pages/explore_four/four",
+    "pages/explore_five/five",
+    "pages/product_info/info",
+    "pages/deed_works/works",
+    "pages/deed_report/report",
+    "pages/deed_diary/diary",
+    "pages/deed_honor/honor",
+    "pages/deed_reportinfo/reportinfo",
+    "pages/deed_diaryinfo/diaryinfo",
+    "pages/honor_unit/unit",
+    "pages/honor_individual/individual",
+    "pages/liuyan/liuyan"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#de2810",
+    "navigationBarTitleText": "深圳脱贫攻坚成果展",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

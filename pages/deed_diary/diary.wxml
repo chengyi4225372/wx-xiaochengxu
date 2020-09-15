@@ -1,0 +1,34 @@
+<!--pages/deed_diary/diary.wxml-->
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box assume_con">
+        <view class="assume_box1">
+          <view class="title2 flex-center">
+            <view class="icon">
+              <image src="../../images/left.png"></image>
+            </view>
+            <view class="h1">扶贫日记</view>
+            <view class="icon">
+              <image src="../../images/right.png"></image>
+            </view>
+          </view>
+          <view class="assume_list">
+            <block wx:for="{{diaryList}}" wx:key>
+              <view class="assume_li">
+                <view class="h1">{{item.title}}<view class="more_btn"><navigator url="/pages/deed_diaryinfo/diaryinfo">更多 ></navigator></view></view>
+                <view class="assume_li_con">
+                  <view class="txt">{{item.introduce}}</view>
+                </view>
+              </view>
+            </block>
+            <view class="more flex-center">显示更多日记</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/epilogue/epilogue.wxml-->
+<import src="../../components/navBar/navBar.wxml" />
+<import src="../../components/navBar/navBar.wxss" />
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="title">
+      <view class="h1 flex-center">
+        <image src="../../images/jieyu.png"></image>
+      </view>
+    </view>
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="brief_box">
+          <view class="brief_txt1">
+            <view class="mark">
+              <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
+            </view>
+            <view class="p">{{message.content}}</view>
+            <view class="mark2">
+              <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
+            </view>
+          </view>
+          <view class="red_btn flex-center"><navigator url="/pages/liuyan/liuyan" hover-class="none" class="flex-center">留言</navigator></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <tabbar active="{{5}}"></tabbar> -->
+<view class='footer' style="{{model.phone == 'iPhone X' ? 'height:130rpx;':''}}">
+  <template is="tabBar" data="{{tabBar:bindData.tabBar,diy_color:'#f12928',model:model}}" />
+</view>

@@ -1,0 +1,56 @@
+<!--pages/practice/practice.wxml--> 
+
+<wxs module="util" src="../../utils/util.wxs" />
+<import src="../../components/navBar/navBar.wxml" />
+<import src="../../components/navBar/navBar.wxss" />  
+
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="brief_box">
+          <view class="brief_txt1">
+            <view class="mark"><image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image></view>
+            <view class="p">{{desc.content}}</view>
+            <view class="mark2"><image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image></view>
+          </view>
+          <view class="practice_list flex-between flex-wrap">
+            <view class="practice_li">
+              <navigator url="/pages/history/history" hover-class="none" class="flex-center flex-flow">
+                <view class="icon"><image src="{{history.path}}"></image></view>
+                <view class="h1">{{history.title}}</view>
+              </navigator>
+            </view>
+            <view class="practice_li">
+              <navigator url="/pages/strategy/strategy?id={{data[0].id}}" hover-class="none" class="flex-center flex-flow">
+                <view class="icon"><image src="{{data[0].path}}"></image></view>
+                <view class="h1">{{data[0].title}}</view>
+              </navigator>
+            </view>
+            <view class="practice_li">
+              <navigator url="/pages/explore/explore?id={{data[1].id}}" hover-class="none" class="flex-center flex-flow">
+                <view class="icon"><image src="{{data[1].path}}"></image></view>
+                <view class="h1">{{data[1].title}}</view>
+              </navigator>
+            </view>
+            <view class="practice_li">
+              <navigator url="/pages/accountability/accountability?id={{data[2].id}}" hover-class="none" class="flex-center flex-flow">
+                <view class="icon"><image src="{{data[2].path}}"></image></view>
+                <view class="h1">{{data[2].title}}</view>
+              </navigator>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <tabbar active="{{2}}"></tabbar> -->
+
+
+<view class='footer' style='{{model.phone=="iPhone X"?"height:130rpx;":""}}'>
+  <template is="tabBar" data="{{tabBar:bindData.tabBar,diy_color:'#f12928',model:model}}" />
+</view>

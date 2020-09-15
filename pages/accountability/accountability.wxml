@@ -1,0 +1,62 @@
+<!--pages/accountability/accountability.wxml-->
+<view class="container">
+  <view class="bg">
+    <image src="../../images/bg.jpg"></image>
+  </view>
+  <view class="preface_box">
+    <view class="preface_con">
+      <view class="preface_con_box">
+        <view class="brief_box">
+          <view class="brief_txt1">
+            <view class="mark">
+              <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
+            </view>
+            <view class="p">{{data.content}}</view>
+            <view class="mark2">
+              <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
+            </view>
+          </view>
+          <view class="strategy_list">
+            
+            <view class="strategy_li">
+              <block wx:for="{{data}}" wx:key="{{index}}">
+              <navigator url="/pages/strategy_one/one?id={{item.id}}" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num{{index +1 |number}}.png"></image>
+                </view>
+                <view class="p">{{item.title}}</view>
+              </navigator>
+             </block>
+           </view>
+
+            <!-- <view class="strategy_li">
+              <navigator url="/pages/accountability_info/info" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num2.png"></image>
+                </view>
+                <view class="p">数说扶贫</view>
+              </navigator>
+            </view>
+            <view class="strategy_li">
+              <navigator url="/pages/accountability_info/info" hover-class="none" class="flex align-center">
+                <view class="strategy_bg">
+                  <image src="../../images/xingzhuang.png"></image>
+                </view>
+                <view class="num">
+                  <image src="../../images/num3.png"></image>
+                </view>
+                <view class="p">结对关系表</view>
+              </navigator>
+            </view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
