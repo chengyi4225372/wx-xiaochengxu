@@ -98,7 +98,7 @@ App({
     //扶贫荣耀简介
     glory_desc :   Http + "api/Glory/getGloryContent",//ok  
     //先进单位简介
-    company_desc :  Http + "api/Glory/getCompanyDesc", //待完成
+    company_desc :  Http + "api/Glory/getCompanyDesc", //ok
     //先进个人列表
     person_list  :  Http + "api/Glory/getGloryPersonList", //ok
     //先进个人详情

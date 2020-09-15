@@ -12,14 +12,15 @@
             <view class="icon">
               <image src="../../images/left.png"></image>
             </view>
-            <view class="h1">深圳扶贫工作受到中央肯定</view>
+            <view class="h1">{{data.title}}</view>
             <view class="icon">
               <image src="../../images/right.png"></image>
             </view>
           </view>
           <view class="history_con">
             <view class='wxParse'>
-              <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+              <!-- <template is="wxParse" data="{{wxParseData:content.nodes}}" /> -->
+              <rich-text class="" nodes="{{data.content}}"></rich-text>
             </view>
           </view>
         </view>
