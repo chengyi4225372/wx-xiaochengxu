@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current: 0,
     /*
     reportList: [
       {
@@ -20,20 +19,34 @@ Page({
     */
     
   },
-  currentChange(e){
+  currentChange(e) {
+    var index = e.currentTarget.dataset.index;
+    var reportList = this.data.reportList;
+    reportList[index].current = e.detail.current
     this.setData({
-      current: e.detail.current
+      reportList: reportList
     })
   },
-  prev(){
+  prev(e) {
+    var index = e.currentTarget.dataset.index;
+    var reportList = this.data.reportList;
+    if (reportList[index].current > 0) {
+      reportList[index].current -= 1;
+    }
+
     this.setData({
-      current: this.data.current-1
+      reportList: reportList
     })
+    console.log(reportList[index].current)
   },
-  next(){
+  next(e) {
+    var index = e.currentTarget.dataset.index;
+    var reportList = this.data.reportList;
+    reportList[index].current += 1
     this.setData({
-      current: this.data.current+1
+      reportList: reportList
     })
+    console.log(reportList[index].current)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -87,7 +100,13 @@ Page({
          }
        })
        
-      
+    var reportList = this.data.reportList;
+    for (var i in reportList) {
+      reportList[i].current = 0;
+    }
+    this.setData({
+      reportList: reportList
+    })
   },
 
   /**
