@@ -122,9 +122,17 @@ Page({
       commentShow: false
     })
   },
+  //留言输入
+  commentInput(e) {
+    this.setData({
+      comment: e.detail.value
+    })
+  },
   // 发布
-  release(){
-    this.commentHide();
+  release() {
+    // this.commentHide();//关闭弹窗
+    var comment = this.data.comment;
+    console.log(comment)
   },
   /**
    * 生命周期函数--监听页面加载

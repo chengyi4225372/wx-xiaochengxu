@@ -3,16 +3,17 @@
   margin-bottom: 50rpx;
 }
 .report_swiper{
-  margin-top: 75rpx;
+  /* margin-top: 75rpx; */
   position: relative;
 }
 .report_swiper swiper{
-  height: 610rpx;
+  height: 1025rpx;
   position: relative;
 }
 .report_img{
   padding: 0 56rpx;
   font-size: 0;
+  margin-top: 75rpx;
 }
 .report_img image{
   width: 100%;
@@ -23,6 +24,10 @@
   font-size: 26rpx;
   line-height: 42rpx;
   color: #222;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .report_swiper .wx-swiper-dot{
   width: 14rpx;
@@ -37,7 +42,7 @@
   height: 46rpx;
   font-size: 0;
   position: absolute;
-  top: 140rpx;
+  top: 54%;
   z-index: 111;
   text-align: center;
 }
@@ -54,4 +59,9 @@
 }
 .swiper-next{
   right: -10rpx;
+}
+
+.brief_txt1 .p {
+  height: 245rpx;
+  overflow-y: scroll;
 }

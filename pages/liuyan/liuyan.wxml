@@ -68,6 +68,6 @@
 <view class="mask" wx:if="{{commentShow}}" bindtap="commentHide"></view>
 <view class="comment_mask" wx:if="{{commentShow}}">
   <view class="title">请在这里输入评论内容</view>
-  <textarea show-confirm-bar="{{false}}" auto-focus="{{true}}" cursor-spacing="70" adjust-position="{{true}}"></textarea>
+  <textarea show-confirm-bar="{{false}}" auto-focus="{{true}}" cursor-spacing="70" adjust-position="{{true}}" value="{{comment}}" bindinput="commentInput"></textarea>
   <view class="release"><button class="release_btn" bindtap="release">发布</button></view>
 </view>
