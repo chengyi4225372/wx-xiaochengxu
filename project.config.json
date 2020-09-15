@@ -1,292 +1,292 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"useMultiFrameRuntime": false,
-		"useApiHook": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"packNpmManually": false,
-		"packNpmRelationList": []
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.10.0",
-	"appid": "wxbea12a5ad00d98fe",
-	"projectname": "%E6%89%B6%E8%B4%AB%E5%8A%9E%EF%BC%88%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%89",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "首页",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "前言",
-					"pathName": "pages/preface/preface",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "综述",
-					"pathName": "pages/overview/overview",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "探索实践",
-					"pathName": "pages/practice/practice",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "项目精选",
-					"pathName": "pages/product/product",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "事迹风采",
-					"pathName": "pages/deed/deed",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "结语与留言",
-					"pathName": "pages/epilogue/epilogue",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "深圳担当",
-					"pathName": "pages/assume/assume",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "帮扶简史",
-					"pathName": "pages/brief/brief",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "历史回望",
-					"pathName": "pages/history/history",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "精准施策",
-					"pathName": "pages/strategy/strategy",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "精准施策-1",
-					"pathName": "pages/strategy_one/one",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "精准施策-2",
-					"pathName": "pages/strategy_two/two",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "精准施策-3",
-					"pathName": "pages/strategy_three/three",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "探索撷音",
-					"pathName": "pages/explore/explore",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "探索撷音-1",
-					"pathName": "pages/explore_one/one",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 16,
-					"name": "探索撷音-2",
-					"pathName": "pages/explore_two/two",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "探索撷音-3",
-					"pathName": "pages/explore_three/three",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "探索撷音-4",
-					"pathName": "pages/explore_four/four",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "探索撷音-5",
-					"pathName": "pages/explore_five/five",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "勇于担当",
-					"pathName": "pages/accountability/accountability",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扶贫精选（详情）",
-					"pathName": "pages/product_info/info",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扶贫作品",
-					"pathName": "pages/deed_works/works",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扶贫报道",
-					"pathName": "pages/deed_report/report",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扶贫报道（详情）",
-					"pathName": "pages/deed_reportinfo/reportinfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扶贫日记",
-					"pathName": "pages/deed_diary/diary",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "扶贫日记（详情）",
-					"pathName": "pages/deed_diaryinfo/diaryinfo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "重要荣誉",
-					"pathName": "pages/deed_honor/honor",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "先进单位",
-					"pathName": "pages/honor_unit/unit",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "先进个人",
-					"pathName": "pages/honor_individual/individual",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "留言",
-					"pathName": "pages/liuyan/liuyan",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "勇于担当（详情）",
-					"pathName": "pages/accountability_info/info",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": false,
+    "useApiHook": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.10.0",
+  "appid": "wxbea12a5ad00d98fe",
+  "projectname": "%E6%89%B6%E8%B4%AB%E5%8A%9E%EF%BC%88%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%89",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "前言",
+          "pathName": "pages/preface/preface",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "综述",
+          "pathName": "pages/overview/overview",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "探索实践",
+          "pathName": "pages/practice/practice",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "项目精选",
+          "pathName": "pages/product/product",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "事迹风采",
+          "pathName": "pages/deed/deed",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "结语与留言",
+          "pathName": "pages/epilogue/epilogue",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "深圳担当",
+          "pathName": "pages/assume/assume",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "帮扶简史",
+          "pathName": "pages/brief/brief",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "历史回望",
+          "pathName": "pages/history/history",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "精准施策",
+          "pathName": "pages/strategy/strategy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "精准施策-1",
+          "pathName": "pages/strategy_one/one",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "精准施策-2",
+          "pathName": "pages/strategy_two/two",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "精准施策-3",
+          "pathName": "pages/strategy_three/three",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "探索撷音",
+          "pathName": "pages/explore/explore",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "探索撷音-1",
+          "pathName": "pages/explore_one/one",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 16,
+          "name": "探索撷音-2",
+          "pathName": "pages/explore_two/two",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "探索撷音-3",
+          "pathName": "pages/explore_three/three",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "探索撷音-4",
+          "pathName": "pages/explore_four/four",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "探索撷音-5",
+          "pathName": "pages/explore_five/five",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "勇于担当",
+          "pathName": "pages/accountability/accountability",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扶贫精选（详情）",
+          "pathName": "pages/product_info/info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扶贫作品",
+          "pathName": "pages/deed_works/works",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扶贫报道",
+          "pathName": "pages/deed_report/report",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扶贫报道（详情）",
+          "pathName": "pages/deed_reportinfo/reportinfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扶贫日记",
+          "pathName": "pages/deed_diary/diary",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "扶贫日记（详情）",
+          "pathName": "pages/deed_diaryinfo/diaryinfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "重要荣誉",
+          "pathName": "pages/deed_honor/honor",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "先进单位",
+          "pathName": "pages/honor_unit/unit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "先进个人",
+          "pathName": "pages/honor_individual/individual",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "留言",
+          "pathName": "pages/liuyan/liuyan",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "勇于担当（详情）",
+          "pathName": "pages/accountability_info/info",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

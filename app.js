@@ -92,7 +92,7 @@ App({
     //扶贫日志新闻列表
     deeds_news_list : Http + "api/Deeds/getNewsList", //ok
     //扶贫日志新闻详情
-    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //ok
+    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //
     //扶贫荣耀分类
     glory_cates :  Http + "api/Glory/getGloryCates", //ok
     //扶贫荣耀简介
