@@ -1,9 +1,9 @@
 //app.js
 
-var Http = "http://local.onebase.com/"; //测试接口
+//var Http = "http://local.onebase.com/"; //测试接口
 
 //正式接口
-//var Http = 'https://v1141.longcai027.cn/';
+var Http = 'https://v1141.longcai027.cn/';
 
 
 App({
@@ -92,7 +92,7 @@ App({
     //扶贫日志新闻列表
     deeds_news_list : Http + "api/Deeds/getNewsList", //ok
     //扶贫日志新闻详情
-    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //
+    deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //ok
     //扶贫荣耀分类
     glory_cates :  Http + "api/Glory/getGloryCates", //ok
     //扶贫荣耀简介

@@ -24,9 +24,11 @@ Page({
           
           that.setData({
             data :res.data.data,
+            content:res.data.data.content,
           })
 
           wx.setStorageSync('data', res.data.data);
+          wx.setStorageSync('content', res.data.data.content);
 
         },
         fail: function() {
