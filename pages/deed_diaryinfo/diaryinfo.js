@@ -110,37 +110,7 @@ Page({
 
     }
   },
-  // getInfo() {
-  //   var that = this;
-  //   wx.request({
-  //     url: getApp().globalData.deeds_info,
-  //     method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-  //     data: {
-  //       id: this.data.id
-  //     },
-  //     success: function (res) {
-  //       // success
-  //       // console.log(res.data.data);
 
-  //       that.setData({
-  //         // diaryList: res.data.data,
-  //         contactinfo: res.data.data.content,
-  //         h1: res.data.data.title
-  //       })
-
-  //       WxParse.wxParse('content', 'html', res.data.data.content, that);
-
-  //       wx.setStorageSync('diaryList', res.data.data);
-
-  //     },
-  //     fail: function () {
-  //       // fail
-  //     },
-  //     complete: function () {
-  //       // complete
-  //     }
-  //   })
-  // },
   /**
    * 生命周期函数--监听页面加载
    */

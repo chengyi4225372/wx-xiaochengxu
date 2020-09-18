@@ -18,7 +18,7 @@
             </view>
           </view>
           <view class="history_con">
-            <image src="../../images/img4.jpg" mode="widthFix"></image>
+            <image src="{{data.ppath}}" mode="widthFix"></image>
             <view class="audio_box">
               <view class="audio_h1">{{data.music_title}}</view>
               <view class="play-bar">
@@ -35,7 +35,8 @@
               </view>
             </view>
             <view class='wxParse'>
-              <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+              <!-- <template is="wxParse" data="{{wxParseData:content.nodes}}" /> -->
+              <rich-text class="" nodes="{{data.content}}"></rich-text>
             </view>
           </view>
         </view>

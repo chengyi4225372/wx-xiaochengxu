@@ -14,61 +14,13 @@
           </view> -->
           <view class="history_con">
             <view class='wxParse'>
-              <!-- <template is="wxParse" data="{{wxParseData:content.nodes}}" /> -->
-              <rich-text class="" nodes="{{data.content}}"></rich-text>
+              <rich-text nodes="{{data.content}}"></rich-text>
             </view>
           </view>
         </view>
 
-        <!-- <view class="history_box">
-          <view class="title2 flex-center">
-            <view class="icon">
-              <image src="../../images/left.png"></image>
-            </view>
-            <view class="h1">易地搬迁</view>
-            <view class="icon">
-              <image src="../../images/right.png"></image>
-            </view>
-          </view>
-          <view class="history_con">
-            <view class='wxParse'>
-              <template is="wxParse" data="{{wxParseData:content2.nodes}}" />
-            </view>
-          </view>
-        </view>
-        <view class="history_box">
-          <view class="title2 flex-center">
-            <view class="icon">
-              <image src="../../images/left.png"></image>
-            </view>
-            <view class="h1">教育帮扶</view>
-            <view class="icon">
-              <image src="../../images/right.png"></image>
-            </view>
-          </view>
-          <view class="history_con">
-            <view class='wxParse'>
-              <template is="wxParse" data="{{wxParseData:content3.nodes}}" />
-            </view>
-          </view>
-        </view>
-        <view class="history_box">
-          <view class="title2 flex-center">
-            <view class="icon">
-              <image src="../../images/left.png"></image>
-            </view>
-            <view class="h1">医疗帮扶</view>
-            <view class="icon">
-              <image src="../../images/right.png"></image>
-            </view>
-          </view>
-          <view class="history_con">
-            <view class='wxParse'>
-              <template is="wxParse" data="{{wxParseData:content4.nodes}}" />
-            </view>
-          </view>
-        </view> -->
-     
+       
+
       </view>
     </view>
   </view>
