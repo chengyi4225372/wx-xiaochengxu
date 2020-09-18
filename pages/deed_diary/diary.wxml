@@ -25,7 +25,7 @@
                 </view>
               </view>
             </block>
-            <view class="more flex-center">显示更多日记</view>
+            <!-- <view class="more flex-center">显示更多日记</view> -->
           </view>
         </view>
       </view>
