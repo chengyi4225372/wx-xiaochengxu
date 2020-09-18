@@ -8,19 +8,19 @@
     <view class="liuyan_list">
       <!-- 热门留言 -->
       <block wx:if="{{tabIndex == 0}}">
-        <block wx:for="{{hotliuyanList}}" wx:key>
+        <block wx:for="{{liuyanList}}" wx:key>
           <view class="liuyan_li flex-start">
             <view class="head">
-              <image src="{{item.headImg}}"></image>
+              <image src="{{item.avatarUrl}}"></image>
             </view>
             <view class="info">
-              <view class="h1">{{item.name}}</view>
-              <view class="txt">{{item.data}}</view>
+              <view class="h1">{{item.nickname}}</view>
+              <view class="txt">{{item.content}}</view>
               <view class="bot flex-between">
-                <view class="date">{{item.date}}</view>
+                <view class="date">{{item.create_time}}</view>
                 <view class="zan flex-center">
-                  <text>{{item.fabulousNumber}}</text>
-                  <view class="fabulous" data-index="{{index}}" bindtap="fabulousTap">
+                  <text>{{item.num}}</text>
+                  <view class="fabulous" data-index="{{index}}" data-id="{{item.id}}" bindtap="fabulousTap">
                     <image src="{{item.fabulous ? '../../images/zan2.png':'../../images/zan.png'}}"></image>
                   </view>
                 </view>
@@ -31,19 +31,19 @@
       </block>
       <!-- 最新留言 -->
       <block wx:else>
-        <block wx:for="{{newliuyanList}}" wx:key>
+        <block wx:for="{{newlist}}" wx:key>
           <view class="liuyan_li flex-start">
             <view class="head">
-              <image src="{{item.headImg}}"></image>
+              <image src="{{item.avatarUrl}}"></image>
             </view>
             <view class="info">
-              <view class="h1">{{item.name}}</view>
-              <view class="txt">{{item.data}}</view>
+              <view class="h1">{{item.nickname}}</view>
+              <view class="txt">{{item.content}}</view>
               <view class="bot flex-between">
-                <view class="date">{{item.date}}</view>
+                <view class="date">{{item.create_time}}</view>
                 <view class="zan flex-center">
-                  <text>{{item.fabulousNumber}}</text>
-                  <view class="fabulous" data-index="{{index}}" bindtap="fabulousTap">
+                  <text>{{item.num}}</text>
+                  <view class="fabulous" data-index="{{index}}" data-id="{{item.id}}"  bindtap="fabulousTap">
                     <image src="{{item.fabulous ? '../../images/zan2.png':'../../images/zan.png'}}"></image>
                   </view>
                 </view>

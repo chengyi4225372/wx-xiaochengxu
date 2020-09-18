@@ -93,6 +93,7 @@ Page({
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         success: function(res){
            
+         console.log(res.data.data); 
           wxdata.setData({
             con:res.data.data,
           })

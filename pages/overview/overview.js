@@ -39,6 +39,7 @@ Page({
       }
 
     })
+    navBar.tabbar("tabBar", 1, this);
   },
 
   /**

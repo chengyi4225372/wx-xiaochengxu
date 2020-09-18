@@ -9,9 +9,8 @@
       <view class="preface_con_box">
         <view class="history_box">
 
-          <view  wx:for="{{data}}" wx:key="{{index}}">
-            
-          <view class="title2 flex-center">
+          
+          <!-- <view class="title2 flex-center">
             <view class="icon">
               <image src="../../images/left.png"></image>
             </view>
@@ -19,15 +18,14 @@
             <view class="icon">
               <image src="../../images/right.png"></image>
             </view>
-          </view> 
+          </view>  -->
    
           <view class="history_con">
             <view class='wxParse'>
                 <!-- <template is="wxParse" data="{{wxParseData:item}}"/> -->
-                <rich-text nodes="{{item.content}}"></rich-text>
+                <rich-text nodes="{{data.content}}"></rich-text>
             </view>
           </view>
-        </view> 
 
       </view>
       </view>

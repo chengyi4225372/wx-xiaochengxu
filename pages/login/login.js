@@ -2,7 +2,7 @@ Page({
 	data: {
 		//判断小程序的API，回调，参数，组件等是否在当前版本可用。
 		canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    isHide: false,
+    isHide: true,
     lee: "",
     flag: true
 	},
@@ -38,7 +38,28 @@ Page({
           });
         }
 			}
-		})
+    }) 
+    wx.request({
+      url: getApp().globalData.logo,
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        
+        that.setData({
+          logo:res.data.data.path,
+        })
+
+     wx.setStorageSync('logo', res.data.data.path)
+
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+
 	},
 	bindGetUserInfo: function(e) {
 		if (e.detail.userInfo) {
@@ -48,12 +69,14 @@ Page({
           getApp().globalData.code = res.code;
           //用户按了允许授权按钮
           console.log(e.detail.userInfo);
+          console.log(getApp().globalData.code);
           var that = this;
           //插入登录的用户的相关信息到数据库s
           wx.request({
-            url: getApp().globalData.user_save_info,
+            url: getApp().globalData.wx_login,
             data: {
               code: getApp().globalData.code,
+              userInfo : e.detail.userInfo,
               nickname: e.detail.userInfo.nickName,
               user_sex: e.detail.userInfo.gender,
               user_avatar: e.detail.userInfo.avatarUrl,
@@ -65,6 +88,16 @@ Page({
               'content-type': 'application/json'
             },
             success: function (res) {
+              //返回用户openid
+              console.log(res);
+              //console.log(res.data.data.openid); 
+             wx.setStorageSync('openid', res.data.data.openid)
+             wx.setStorageSync('u_id', res.data.data.u_id)
+       
+              wx.navigateTo({
+                url: '/pages/liuyan/liuyan',
+              })
+              return;
               //从数据库获取用户信息
               getApp().globalData.openid = res.data.returnData.openid;
               getApp().globalData.session_key = res.data.returnData.session_key;
@@ -198,6 +231,69 @@ Page({
       });
     }
 
+  },
+    /**
+   * 获取用户信息,授权
+   */
+  getUserInfo(e) {
+    this.setData({
+      loading: true,
+      disabled: true
+    })
+    if (e.detail.encryptedData) {
+      wx.login({
+        success: login_res => {
+          if (login_res.code) {
+            wx.getUserInfo({
+              success: info_res => {
+                this.wx_login(login_res.code, info_res)
+              }
+            })
+          } else {
+            this.setData({
+              loading: false,
+              disabled: false
+            })
+            wx.showToast({
+              title: '登录失败',
+              icon: 'none'
+            })
+          }
+        }
+      })
+    } else {
+      wx.showToast({
+        title: '授权失败',
+        icon: 'none'
+      })
+      this.setData({
+        loading: false,
+        disabled: false
+      })
+    }
+  },
+  wx_login(code,info_res){
+    wx.request({
+      url: getApp().globalData.wx_login,
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+     data:{code:code,            
+           nickName: info_res.userInfo.nickName,
+           avatarUrl: info_res.userInfo.avatarUrl,
+      },
+      success: function(res){
+         //console.log(res.data.data); 
+        // //  that.setData({
+        // //   result: res.data.data,
+        // //  })
+        //if(res.data.code=='RESULT_SUCCESS'){
+              wx.setStorageSync('openid', res.data.data.openid)
+              wx.navigateTo({
+                url: 'pages/liuyan/liuyan',
+              })
+        //}
+       
+      }
+  })
   }
 
 })

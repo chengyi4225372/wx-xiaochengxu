@@ -14,14 +14,14 @@
               <block wx:for="{{reportList}}" wx:key="*this">
                 <swiper-item>
                   <view class="report_slide">
-                    <navigator url="/pages/deed_reportinfo/reportinfo" hover-class="none">
+                    <!-- <navigator url="/pages/deed_reportinfo/reportinfo" hover-class="none"> -->
                       <view class="report_img"><image src="{{item.path}}"></image></view>
                       <view class="report_info">
                         <view class="report_info_h2">{{item.users}}</view>
                         <view class="h3">{{item.address}}</view>
                         <view class="txt">{{item.desc}}</view>
                       </view>
-                    </navigator>
+                    <!-- </navigator> -->
                   </view>
                 </swiper-item>
               </block>

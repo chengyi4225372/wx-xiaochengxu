@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/login/login",
     "pages/preface/preface",
     "pages/overview/overview",
     "pages/practice/practice",
@@ -31,8 +32,7 @@
     "pages/deed_diaryinfo/diaryinfo",
     "pages/honor_unit/unit",
     "pages/honor_individual/individual",
-    "pages/liuyan/liuyan",
-    "pages/login/login"
+    "pages/liuyan/liuyan"
   ],
   "window":{
     "backgroundTextStyle":"light",

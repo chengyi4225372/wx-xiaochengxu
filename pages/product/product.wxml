@@ -26,7 +26,7 @@
             <view class="mark">
               <image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image>
             </view>
-            <view class="p">{{con.content}}</view>
+            <rich-text nodes="{{con}}" space='nbsp'></rich-text>
             <view class="mark2">
               <image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image>
             </view>

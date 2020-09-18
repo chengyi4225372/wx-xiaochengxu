@@ -14,7 +14,7 @@
         <view class="brief_box">
           <view class="brief_txt1">
             <view class="mark"><image src="../../images/icon3.png" style="width: 44rpx;height: 38rpx;"></image></view>
-            <view class="p">{{desc.content}}</view>
+            <rich-text  nodes="{{desc.content}}" space="nbsp"></rich-text> 
             <view class="mark2"><image src="../../images/icon4.png" style="width: 36rpx;height: 30rpx;"></image></view>
           </view>
           <view class="practice_list flex-between flex-wrap">

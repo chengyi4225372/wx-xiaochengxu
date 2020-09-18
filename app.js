@@ -1,9 +1,10 @@
 //app.js
 
-var Http = "http://local.onebase.com/"; //测试接口
+//var Http = "http://local.onebase.com/"; //测试接口
 
 //正式接口
 //var Http = 'https://v1141.longcai027.cn/';
+var Http = 'https://www.szfpb.com/';
 
 
 App({
@@ -17,6 +18,13 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        // wx.request({
+        //   url: Http+'api/user/wx_login',
+
+        //   success:function(){
+
+        //   }
+        // })
       }
     })
     // 获取用户信息
@@ -86,7 +94,7 @@ App({
     //扶贫作品 视频
     deeds_video: Http +"api/Deeds/getWorksVideoList",//ok
     //扶贫报道列表
-    deeds_log  : Http + "api/Deeds/getDeedsLog",//有问题
+    deeds_log  : Http + "api/Deeds/getDeedsLog",//ok
     //扶贫报道简介
     deeds_logdesc : Http + "api/Deeds/deesLogInfo" , //无用
     //扶贫报道详情
@@ -96,7 +104,7 @@ App({
     //扶贫日志新闻详情
     deeds_newsinfo : Http +"api/Deeds/getNewsInfo", //ok
     //扶贫荣耀分类
-    glory_cates :  Http + "api/Glory/getGloryCates", //ok
+    glory_cates :  Http + "api/Glory/getGloryCates", //oks
     //扶贫荣耀简介
     glory_desc :   Http + "api/Glory/getGloryContent",//ok  
     //先进单位简介
@@ -108,11 +116,14 @@ App({
     //留言结语
     message_desc  : Http + "api/Message/getMessageContentApi", //ok
     //提交留言
-    message_action : Http +"api/Message/setMessageAPi",
-    //最新留言 热门留言
-    message_news  : Http +"api/Message/getMessageList",
-    //留言点赞
-   
-
+    message_action : Http +"api/Message/setMessageAPi", //ok
+    //2最新留言  1热门留言
+    message_news  : Http +"api/Message/getMessageList", //ok
+    //留言点赞 u_id 用户id m_id 留言id
+    zan            : Http+"api/Message/zan", //ok
+    //微信登录
+    wx_login : Http +"api/User/wx_login", //ok
+    //小程序logo
+    logo :  Http +"api/Logo/getLogo" //ok
   }
 })

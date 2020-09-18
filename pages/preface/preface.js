@@ -30,7 +30,8 @@ Page({
           result: res.data.data,
          })
        
-         wx.setStorageSync('result', res.data.data)
+         wx.setStorageSync('result', res.data.data) 
+        //  WxParse.wxParse('content','html',res.data.data.content,that,5)
       },
       fail: function() {
         // fail

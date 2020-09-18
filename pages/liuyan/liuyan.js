@@ -6,6 +6,7 @@ Page({
    */
   data: {
     tabIndex: 0,
+    /*
     hotliuyanList: [
       {
         headImg: '../../images/head1.png',
@@ -90,6 +91,7 @@ Page({
         fabulousNumber: '1483',
       }
     ]
+    */
   },
   tabChooise(e){
     this.setData({
@@ -99,14 +101,35 @@ Page({
   // 点赞
   fabulousTap(e){
     var liuyanList = this.data.liuyanList;
-    var index = e.currentTarget.dataset.index;
+    var index = e.currentTarget.dataset.index;       
+    var u_id  = wx.getStorageSync('u_id');
+    var m_id  = e.currentTarget.dataset.id;   
+    console.log(m_id);
+ 
+    wx.request({
+      url: getApp().globalData.zan,
+      data: {'u_id':u_id,'m_id':m_id},
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      success: function(res){
+        // success
+        console.log(res.data);
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+
     if (liuyanList[index].fabulous){
       liuyanList[index].fabulous = false;
-      liuyanList[index].fabulousNumber--
+      liuyanList[index].num--
     }else{
       liuyanList[index].fabulous = true;
-      liuyanList[index].fabulousNumber++
-    }
+      liuyanList[index].num++
+    } 
+    
     this.setData({
       liuyanList: liuyanList
     })
@@ -130,14 +153,109 @@ Page({
   },
   // 发布
   release() {
-    // this.commentHide();//关闭弹窗
+     //this.commentHide();//关闭弹窗
     var comment = this.data.comment;
+    if(wx.getStorageSync('openid')){
+      //去留言 
+       wx.request({
+          url:getApp().globalData.message_action,
+          data: {'openid':wx.getStorageSync('openid'),'content':comment,'u_id':wx.getStorageSync('u_id')},
+          method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          success: function(res){
+             // success
+             if(res.data.code == "success"){
+
+              wx.showToast({
+                title: res.data.msg,  // 标题
+                icon: 'success',   // 图标类型，默认success
+                duration: 5000   // 提示窗停留时间，默认1500ms
+              })
+
+              wx.navigateTo({
+                url: '/pages/liuyan/liuyan',
+              })
+             }else {
+          
+              wx.showToast({
+                title: res.data.msg,  // 标题
+                icon: 'success',   // 图标类型，默认success
+                duration: 5000   // 提示窗停留时间，默认1500ms
+               })
+             }
+
+           
+          },
+          fail: function() {
+             // fail
+           },
+          complete: function() {
+            // complete
+         }
+        })
+
+    }else{
+      //去授权
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }
     console.log(comment)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+     //this.login() 
+    
+     var news = this;
+     //热门留言
+     wx.request({
+       url: getApp().globalData.message_news,
+       data: {'order':1},
+       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+       success: function(res){
+         // success
+        console.log(res.data.data);
+         
+         news.setData({
+          liuyanList:res.data.data
+         })
+
+        wx.setStorageSync('hotnews', res.data.data) 
+
+       },
+       fail: function() {
+         // fail
+       },
+       complete: function() {
+         // complete
+       }
+     })
+
+     //最新留言
+      //热门留言
+      wx.request({
+        url: getApp().globalData.message_news,
+        data: {'order':2},
+        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        success: function(res){
+          // success
+         console.log(res.data.data);
+          
+          news.setData({
+            newlist:res.data.data
+          })
+ 
+         wx.setStorageSync('newlist', res.data.data) 
+ 
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
 
   },
 
@@ -188,5 +306,34 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  login(){
+    wx.login({
+      success: login_res=> {
+        //console.log(res)
+        wx.getUserInfo({
+          success: info_res => {
+            this.wx_login(login_res.code, info_res)
+          }
+        })
+    },
+    })
+  },
+  wx_login(code,info_res){
+    wx.request({
+      url: getApp().globalData.wx_login,
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+     data:{code:code,            
+           nickName: info_res.userInfo.nickName,
+           avatarUrl: info_res.userInfo.avatarUrl,
+      },
+      success: function(res){
+        //  console.log(res.data.data.openid); 
+        // //  that.setData({
+        // //   result: res.data.data,
+        // //  })
+        wx.setStorageSync('openid', res.data.data.openid)
+      }
+  })
   }
 })

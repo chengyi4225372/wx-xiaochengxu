@@ -13,10 +13,11 @@
     <view class="preface_con">
       <view class="preface_con_box">
         <view class="preface_info">
-          <view class='wxParse'>
-
-            <p style="text-indent:2em;">{{result.content}}</p>
-          </view>
+           <!-- <view class='wxParse'> -->
+               <rich-text  nodes="{{result.content}}" space="nbsp"></rich-text>
+              <!-- <template is="wxParse" data="{{wxParseData:content.nodes}}" /> -->
+          <!-- </view>  -->
+        
           <view class="preface_video">
             <video id="myvideo" bindtimeupdate="timeupdate" src="{{result.path}}" poster="{{result.path}}" title="{{result.title}}" objectFit="cover" controls="{{true}}">
               <view class="video-play flex-center" bindtap="videoPlay" data-id="myvideo" wx:if="{{videoPlay}}">

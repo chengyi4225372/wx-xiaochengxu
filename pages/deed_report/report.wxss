@@ -5,10 +5,12 @@
 .report_swiper{
   /* margin-top: 75rpx; */
   position: relative;
+  height: 100%;
 }
 .report_swiper swiper{
   height: 1025rpx;
   position: relative;
+  height: 100%;
 }
 .report_img{
   padding: 0 56rpx;
@@ -76,4 +78,17 @@
 .brief_txt1 .p {
   height: 245rpx;
   overflow-y: scroll;
+}
+.report_slide{
+  height: 95%;
+  overflow-y: scroll;
+}
+.report_slide::-webkit-scrollbar{
+  display: none;
+}
+.report_swiper .wx-swiper-dots{
+  bottom: 0;
+}
+.report_box{
+  height: 100%;
 }

@@ -1,5 +1,6 @@
 // pages/practice/practice.js
 const app = getApp();
+const navBar = require('../../components/navBar/navBar.js');
 
 Page({
 
@@ -79,7 +80,7 @@ Page({
         // complete
       }
     })
-
+    navBar.tabbar("tabBar", 2, this);
   },
 
   /**

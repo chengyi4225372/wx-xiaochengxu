@@ -19,7 +19,7 @@
           <view class="assume_list">
             <block wx:for="{{diaryList}}" wx:key>
               <view class="assume_li">
-                <view class="h1">{{item.title}}<view class="more_btn"><navigator url="/pages/deed_diaryinfo/diaryinfo?id={{item.id}}">更多 ></navigator></view></view>
+                <view class="h1">{{item.title}}<view class="more_btn"><navigator url="/pages/deed_diaryinfo/diaryinfo?id={{item.id}}">点击收听 ></navigator></view></view>
                 <view class="assume_li_con">
                   <view class="txt">{{item.introduce}}</view>
                 </view>
